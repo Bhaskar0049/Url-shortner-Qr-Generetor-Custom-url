@@ -1,0 +1,68 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block style %}
+<title> Ihvtool : About  </title>
+<meta name="description" content="Ihvtool : This is our about page" />
+{% endblock %}
+
+{% block index %}
+{% endblock %}
+
+{% block content %}
+
+<div class="container text-center">
+    <div class="row">
+      <div class="col-lg-6">
+        <section class=" text-center container">
+          <div class="row py-lg-5">
+            <div class="col-lg-8  mx-auto"><b>
+              <h1 class="fw-light">It's Your Platform</h1>
+            </b>
+              <p class="lead ">Our platform allows anyone to shorten any link and generate any url or text into QR code. Sorry, we forgot to mention that our platform is <b>completely free!</b></p>
+              <p>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="col-lg-6 ">
+        <ul class="list-group my-5 ">
+            <li class="list-group-item">Url Shortener</li>
+            <li class="list-group-item">QR Code Generator</li>
+            <li class="list-group-item">Custom URL Generator</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1 class="text-center mx-2 my2">URL SHORTENER</h1>
+    <ul class="list-group my-2">
+        <li class="list-group-item list-group-item-primary" aria-disabled="true">How URL Shortner Works?</li>
+        <li class="list-group-item">Put Original Url or Link</li>
+        <li class="list-group-item">Then Submit Your Url </li>
+        <li class="list-group-item">Short Url Has Been Generated</li>
+        <li class="list-group-item">Save Your Short URL</li>
+    </ul>
+    <h1 class="text-center mx-2 my2">QR CODE GENERATOR</h1>
+    <ul class="list-group my-2">
+        <li class="list-group-item list-group-item-primary" aria-disabled="true">How QR Generator Works?</li>
+        <li class="list-group-item">Put any Text, Url or Link</li>
+        <li class="list-group-item">Then Click On Generate QR </li>
+        <li class="list-group-item">After Generated Download It</li>
+        <li class="list-group-item">Save Your QR Code </li>
+    </ul>
+    <h1 class="text-center mx-2 my2">CUSTOM URL GENERATOR</h1>
+    <ul class="list-group my-2">
+        <li class="list-group-item list-group-item-primary" aria-disabled="true">How Custom Url Works?</li>
+        <li class="list-group-item">Put Original Url or Link</li>
+        <li class="list-group-item">Put your custom url name </li>
+        <li class="list-group-item">You can use only alphabet,numbers & '-'</li>
+        <li class="list-group-item">Example (valid) : Blearningclub-8-new </li>
+        <li class="list-group-item">Example (not valid): Blearning/new/8%abc</li>
+        <li class="list-group-item">Save your custom url & then exit </li>
+    </ul>
+  </div>
+{% endblock %}

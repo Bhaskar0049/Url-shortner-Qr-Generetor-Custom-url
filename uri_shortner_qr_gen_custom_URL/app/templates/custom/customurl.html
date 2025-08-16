@@ -1,0 +1,102 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block style %}
+<title>Ihvtool: Custom Url  </title>
+<meta name="description" content="Our Custom URL Generator is one of the fastest and free tools available on the internet. Check it out and design your own custom URL." />
+<style>
+
+
+/* Style 9
+   ----------------------------- */
+.nine h1 {
+  text-align:center; font-size:50px; text-transform:uppercase; color:#222; letter-spacing:1px;
+  font-family:"Playfair Display", serif; font-weight:400;
+}
+.nine h1 span {
+  margin-top: 5px;
+    font-size:15px; color:#444; word-spacing:1px; font-weight:normal; letter-spacing:2px;
+    text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
+
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.nine h1 span:after,.nine h1 span:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    height: 5px;
+  background-color:#f8f8f8;
+}
+
+
+</style>
+{% endblock %}
+
+
+
+
+
+{% block index %}
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+  <div class="nine">
+    <h1>CUSTOMED URL<span>
+        SAVE THIS URL</span></h1>
+  </div>
+    
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Your CUSTOM URL</label>
+          <input id="myInput" value="{{ custom_url }}" class="form-control"  aria-describedby="emailHelp">
+         
+        </div>
+
+    <p class="text-center px-2 py-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3" id="my_url">Your Custom URL is <b>{{ custom_url }}</b> please copy it and store it   </p>
+    <button onclick="myFunction()" type="button" class="btn btn-primary btn-lg">COPY URL</button>
+    <div class="row my-2">
+      <div class="col-lg-6">
+          <img src="{% static 'pic/custom2.png' %}" height="400" width="300" class="text-center bd-placeholder-img mx-auto" alt="...">
+      </div>
+      <div class="col-lg-6">
+          <ul class="list-group ">
+              <li class="list-group-item list-group-item-primary" aria-disabled="true">How Custom Url Works?</li>
+              <li class="list-group-item">Put Original Url or Link</li>
+              <li class="list-group-item">Put your custom url name </li>
+              <li class="list-group-item">You can use only alphabet,numbers & '-'</li>
+              <li class="list-group-item">Example (valid) : Blearningclub-8-new </li>
+              <li class="list-group-item">Example (not valid): Blearning/new/8%abc</li>
+              <li class="list-group-item">Save your custom url & then exit </li>
+            </ul>
+      </div>
+  </div>
+</div>
+
+<script>
+    function myFunction() {
+      // Get the text field
+      var copyText = document.getElementById("myInput");
+    
+      // Select the text field
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+      // Copy the text inside the text field
+      navigator.clipboard.writeText(copyText.value);
+      
+      // Alert the copied text
+      alert("Copied the text: " + copyText.value);
+    }
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block style %}
+<title> Ihvtool : Privacy & Policy </title>
+<meta name="description" content="Ihvtool : Privacy & Policy" />
+<style>
+
+
+    /* Style 9
+       ----------------------------- */
+       .nine h1 {
+      text-align:center; font-size:50px; text-transform:uppercase; color:#222; letter-spacing:1px;
+      font-family:"Playfair Display", serif; font-weight:400;
+    }
+    .nine h1 span {
+      margin-top: 5px;
+        font-size:15px; color:#444; word-spacing:1px; font-weight:normal; letter-spacing:2px;
+        text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
+    
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-template-rows: 27px 0;
+        grid-gap: 20px;
+        align-items: center;
+    }
+    
+    .nine h1 span:after,.nine h1 span:before {
+        content: " ";
+        display: block;
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        height: 5px;
+      background-color:#f8f8f8;
+    }
+    
+    
+    </style>
+{% endblock %}
+
+{% block index %}
+{% endblock %}
+
+{% block content %}
+<div class="nine">
+    <h1>PRIVACY & POLICY<span>
+       This is our privacy & policy</span></h1>
+</div>
+  <div class="container my-2">
+
+    <ul class="list-group my-2">
+        <li class="list-group-item " >Users are first priority </li>
+        <li class="list-group-item">We never share Your Url</li>
+        <li class="list-group-item">Your url lasted for 60 days</li>
+        <li class="list-group-item">For extend you can contact email at footer</li>
+        <li class="list-group-item">Always Save Your Generated URL. We never give you again</li>
+        <li class="list-group-item">We never share your QR code</li>
+        <li class="list-group-item">Feel free to use our service</li>
+        <li class="list-group-item">Any difficulty contact us. Contact details in footer </li>
+
+    </ul>
+  </div>
+{% endblock %}
